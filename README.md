@@ -2,6 +2,8 @@
 
 [Github Repo](https://github.com/AlexHunton2/CS355-Project-AlexH)
 
+Verison: 1.0.3
+
 Note: not sure how to not include "de-anomymizing" information when the link to the github has to be included.
  
 ## Protocol Specification
