@@ -1,14 +1,9 @@
 import socket
-import struct
 import threading
 
-from Crypto import Signature
-
-import crypto.ahcrypto as ahc
-
-from Crypto.PublicKey import RSA
 from Crypto.PublicKey import ECC
 
+import crypto.ahcrypto as ahc
 from comm.ahcomm import Socket
 
 PORT = 12346
