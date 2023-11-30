@@ -70,6 +70,7 @@ def hash_folder(folder_path):
 
 folder_location = input("Please enter folder location of files or exit: ");
 if folder_location == "exit":
+    server_socket.close()
     exit()
 
 
@@ -77,6 +78,7 @@ try:
     hash_folder(folder_location)
 except Exception:
     print(f"Failed at upload phase: {Exception}")
+    server_socket.close()
     exit()
 
 for hash_value in client_hash_values.values():
@@ -85,6 +87,7 @@ for hash_value in client_hash_values.values():
     response = socket.read()
     if (response and response.decode() != "Success."):
         print(f"Failed at upload phase. {response}")
+        server_socket.close()
         exit()
 
 '''
@@ -107,8 +110,6 @@ while True:
     for file_name, file_hash in client_hash_values.items():
         if file_hash in hashes:
             print(f"A connected client shares the code segment: {file_name}")
-
-
 
 
 # Close the connection with the server
